@@ -1,0 +1,414 @@
+Analysis & Synthesis report for rns16
+Thu Oct 16 19:02:19 2025
+Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Oct 16 19:02:18 2025          ;
+; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Revision Name                      ; rns16                                          ;
+; Top-level Entity Name              ; rns16                                          ;
+; Family                             ; Cyclone IV GX                                  ;
+; Total logic elements               ; 2,018                                          ;
+;     Total combinational functions  ; 2,010                                          ;
+;     Dedicated logic registers      ; 758                                            ;
+; Total registers                    ; 758                                            ;
+; Total pins                         ; 30                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total GXB Receiver Channel PCS     ; 0                                              ;
+; Total GXB Receiver Channel PMA     ; 0                                              ;
+; Total GXB Transmitter Channel PCS  ; 0                                              ;
+; Total GXB Transmitter Channel PMA  ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CGX22BF14C6     ;                    ;
+; Top-level entity name                                            ; rns16              ; rns16              ;
+; Family name                                                      ; Cyclone IV GX      ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 36          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
+;     Processor 7            ;   0.1%      ;
+;     Processor 8            ;   0.1%      ;
+;     Processors 9-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                          ;
++----------------------------------+-----------------+------------------------+-----------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path            ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------+---------+
+; rns16.v                          ; yes             ; User Verilog HDL File  ; H:/PROJETS/FPGA/PROGRAMME16BITS/rns16.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 30               ;
+;                          ;                  ;
+; DSP block 9-bit elements ; 0                ;
+;                          ;                  ;
+; Maximum fan-out node     ; rst_n~input      ;
+; Maximum fan-out          ; 762              ;
+; Total fan-out            ; 8953             ;
+; Average fan-out          ; 3.17             ;
++--------------------------+------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                  ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+-------------+--------------+
+; |rns16                     ; 2010 (2010)         ; 758 (758)                 ; 0           ; 0            ; 0       ; 0         ; 0         ; 30   ; 0            ; |rns16              ; rns16       ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; T7_r[4,34]                             ; Merged with T7_r[25]                   ;
+; T7_r[28,30,32]                         ; Merged with T7_r[12]                   ;
+; T7_r[6,27,29,31]                       ; Merged with T7_r[13]                   ;
+; T7_r[5]                                ; Merged with T7_r[26]                   ;
+; T7_r[3]                                ; Merged with T7_r[24]                   ;
+; T7_r[2]                                ; Merged with T7_r[23]                   ;
+; T7_r[1,16,22]                          ; Merged with T7_r[10]                   ;
+; T7_r[9,21]                             ; Merged with T7_r[0]                    ;
+; T11_r[14,15,20]                        ; Merged with T11_r[13]                  ;
+; T13_r[18]                              ; Merged with T11_r[13]                  ;
+; T7_r[20]                               ; Merged with T11_r[13]                  ;
+; T7_r[8]                                ; Merged with T7_r[19]                   ;
+; T7_r[7,18]                             ; Merged with T7_r[14]                   ;
+; T7_r[17]                               ; Merged with T7_r[11]                   ;
+; T11_r[36]                              ; Merged with T11_r[19]                  ;
+; T11_r[35]                              ; Merged with T11_r[18]                  ;
+; T11_r[34]                              ; Merged with T11_r[17]                  ;
+; T11_r[16,21,33]                        ; Merged with T11_r[0]                   ;
+; T11_r[8]                               ; Merged with T11_r[30]                  ;
+; T11_r[7]                               ; Merged with T11_r[29]                  ;
+; T11_r[6,28]                            ; Merged with T11_r[27]                  ;
+; T11_r[5]                               ; Merged with T11_r[26]                  ;
+; T11_r[4]                               ; Merged with T11_r[25]                  ;
+; T11_r[3]                               ; Merged with T11_r[24]                  ;
+; T11_r[2]                               ; Merged with T11_r[23]                  ;
+; T11_r[22]                              ; Merged with T11_r[1]                   ;
+; T13_r[36]                              ; Merged with T13_r[17]                  ;
+; T13_r[35]                              ; Merged with T13_r[16]                  ;
+; T13_r[32]                              ; Merged with T13_r[24]                  ;
+; T13_r[26]                              ; Merged with T13_r[14]                  ;
+; T13_r[20]                              ; Merged with T13_r[1]                   ;
+; T13_r[19]                              ; Merged with T13_r[0]                   ;
+; T17_r[29]                              ; Merged with T17_r[13]                  ;
+; T17_r[12,27,28]                        ; Merged with T17_r[11]                  ;
+; T17_r[4]                               ; Merged with T17_r[20]                  ;
+; T19_r[9]                               ; Merged with T19_r[11]                  ;
+; T11_r[13]                              ; Stuck at GND due to stuck port data_in ;
+; T31_r[29]                              ; Stuck at GND due to stuck port data_in ;
+; T23_r[20,31]                           ; Stuck at GND due to stuck port data_in ;
+; T29_r[10]                              ; Stuck at GND due to stuck port data_in ;
+; L1e[29]                                ; Stuck at GND due to stuck port data_in ;
+; L2e[29]                                ; Stuck at GND due to stuck port data_in ;
+; L2e[30]                                ; Merged with L2e[0]                     ;
+; L2e[31]                                ; Merged with L2e[1]                     ;
+; L1e[30]                                ; Merged with L1e[0]                     ;
+; L1e[31]                                ; Merged with L1e[1]                     ;
+; T31_r[30]                              ; Merged with T31_r[0]                   ;
+; T31_r[31]                              ; Merged with T31_r[1]                   ;
+; T23_r[28]                              ; Merged with T23_r[17]                  ;
+; T23_r[6,27]                            ; Merged with T23_r[16]                  ;
+; T23_r[21,32]                           ; Merged with T23_r[0]                   ;
+; T23_r[30]                              ; Merged with T23_r[19]                  ;
+; T23_r[29]                              ; Merged with T23_r[18]                  ;
+; T23_r[5,26]                            ; Merged with T23_r[15]                  ;
+; T23_r[4]                               ; Merged with T23_r[25]                  ;
+; T23_r[3]                               ; Merged with T23_r[24]                  ;
+; T23_r[2]                               ; Merged with T23_r[23]                  ;
+; T23_r[22]                              ; Merged with T23_r[1]                   ;
+; T29_r[17]                              ; Merged with T29_r[16]                  ;
+; T29_r[11]                              ; Merged with T29_r[0]                   ;
+; Total Number of Removed Registers = 81 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                        ;
++---------------+---------------------------+----------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register ;
++---------------+---------------------------+----------------------------------------+
+; T31_r[29]     ; Stuck at GND              ; L1e[29], L2e[29]                       ;
+;               ; due to stuck port data_in ;                                        ;
++---------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 758   ;
+; Number of registers using Synchronous Clear  ; 621   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 730   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |rns16|y5[0]               ;
+; 3:1                ; 36 bits   ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; Yes        ; |rns16|L2e[8]              ;
+; 3:1                ; 36 bits   ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; Yes        ; |rns16|L1e[0]              ;
+; 3:1                ; 274 bits  ; 548 LEs       ; 274 LEs              ; 274 LEs                ; Yes        ; |rns16|T31_r[2]            ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |rns16|x0_16[11]           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |rns16|x_lo[4]             ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |rns16|y4[2]               ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 74 LEs               ; 0 LEs                  ; Yes        ; |rns16|sum_ab[3]           ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 74 LEs               ; 0 LEs                  ; Yes        ; |rns16|L2a[11]             ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 74 LEs               ; 0 LEs                  ; Yes        ; |rns16|L2b[0]              ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 74 LEs               ; 0 LEs                  ; Yes        ; |rns16|L1a[18]             ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 74 LEs               ; 0 LEs                  ; Yes        ; |rns16|L1b[22]             ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 74 LEs               ; 0 LEs                  ; Yes        ; |rns16|L1c[32]             ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 74 LEs               ; 0 LEs                  ; Yes        ; |rns16|L1d[31]             ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |rns16|r7p[4]              ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |rns16|r11p[0]             ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |rns16|r13p[1]             ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |rns16|r15p[0]             ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |rns16|r17p[2]             ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |rns16|r19p[4]             ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |rns16|r31p[0]             ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |rns16|r23p[0]             ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |rns16|r29p[4]             ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |rns16|r7[3]               ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |rns16|r11[1]              ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |rns16|r13[1]              ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |rns16|r15[1]              ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |rns16|r17[2]              ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |rns16|r19[1]              ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |rns16|r31[4]              ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |rns16|r23[3]              ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |rns16|r29[2]              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 30                          ;
+; cycloneiii_ff         ; 758                         ;
+;     ENA               ; 112                         ;
+;     ENA SCLR          ; 618                         ;
+;     SCLR              ; 3                           ;
+;     plain             ; 25                          ;
+; cycloneiii_lcell_comb ; 2010                        ;
+;     arith             ; 799                         ;
+;         2 data inputs ; 226                         ;
+;         3 data inputs ; 573                         ;
+;     normal            ; 1211                        ;
+;         0 data inputs ; 35                          ;
+;         1 data inputs ; 26                          ;
+;         2 data inputs ; 294                         ;
+;         3 data inputs ; 171                         ;
+;         4 data inputs ; 685                         ;
+;                       ;                             ;
+; Max LUT depth         ; 18.90                       ;
+; Average LUT depth     ; 8.81                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+    Info: Processing started: Thu Oct 16 19:02:05 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rns16 -c rns16
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file rns16.v
+    Info (12023): Found entity 1: rns16 File: H:/PROJETS/FPGA/PROGRAMME16BITS/rns16.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file /projets/fpga/programme8bits/tb_rns16.v
+    Info (12023): Found entity 1: tb_rns16 File: H:/PROJETS/FPGA/PROGRAMME8BITS/tb_rns16.v Line: 7
+Info (12127): Elaborating entity "rns16" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at rns16.v(728): object "S4_mod" assigned a value but never read File: H:/PROJETS/FPGA/PROGRAMME16BITS/rns16.v Line: 728
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 2056 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 18 output pins
+    Info (21061): Implemented 2026 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4971 megabytes
+    Info: Processing ended: Thu Oct 16 19:02:19 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:30
+
+

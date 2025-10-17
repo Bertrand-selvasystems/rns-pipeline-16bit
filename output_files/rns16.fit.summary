@@ -1,0 +1,20 @@
+Fitter Status : Successful - Thu Oct 16 19:02:43 2025
+Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Revision Name : rns16
+Top-level Entity Name : rns16
+Family : Cyclone IV GX
+Device : EP4CGX22BF14C6
+Timing Models : Final
+Total logic elements : 2,024 / 21,280 ( 10 % )
+    Total combinational functions : 2,010 / 21,280 ( 9 % )
+    Dedicated logic registers : 758 / 21,280 ( 4 % )
+Total registers : 758
+Total pins : 30 / 81 ( 37 % )
+Total virtual pins : 0
+Total memory bits : 0 / 774,144 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 80 ( 0 % )
+Total GXB Receiver Channel PCS : 0 / 2 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 2 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 2 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 2 ( 0 % )
+Total PLLs : 0 / 3 ( 0 % )

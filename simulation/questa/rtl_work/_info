@@ -1,0 +1,34 @@
+m255
+K4
+z2
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dH:/PROJETS/FPGA/PROGRAMME16BITS/simulation/questa
+vrns16
+!s110 1760634192
+!i10b 1
+!s100 h4nJ6V4ml8kndnFVBGjHf2
+I5<OE4F9dCmdM8ZJXGa9j`0
+R0
+w1760634123
+8H:/PROJETS/FPGA/PROGRAMME16BITS/rns16.v
+FH:/PROJETS/FPGA/PROGRAMME16BITS/rns16.v
+!i122 0
+L0 4 1035
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2021.2;73
+r1
+!s85 0
+31
+!s108 1760634192.000000
+!s107 H:/PROJETS/FPGA/PROGRAMME16BITS/rns16.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/PROJETS/FPGA/PROGRAMME16BITS|H:/PROJETS/FPGA/PROGRAMME16BITS/rns16.v|
+!i113 0
+o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+H:/PROJETS/FPGA/PROGRAMME16BITS -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0

@@ -1,0 +1,129 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "in_ready",
+					"strict" : false
+				},
+				{
+					"name" : "out_word[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_word[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_word[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_word[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out_word[4]",
+					"strict" : false
+				},
+				{
+					"name" : "out_word[5]",
+					"strict" : false
+				},
+				{
+					"name" : "out_word[6]",
+					"strict" : false
+				},
+				{
+					"name" : "out_word[7]",
+					"strict" : false
+				},
+				{
+					"name" : "out_word[8]",
+					"strict" : false
+				},
+				{
+					"name" : "out_word[9]",
+					"strict" : false
+				},
+				{
+					"name" : "out_word[10]",
+					"strict" : false
+				},
+				{
+					"name" : "out_word[11]",
+					"strict" : false
+				},
+				{
+					"name" : "out_word[12]",
+					"strict" : false
+				},
+				{
+					"name" : "out_word[13]",
+					"strict" : false
+				},
+				{
+					"name" : "out_word[14]",
+					"strict" : false
+				},
+				{
+					"name" : "out_word[15]",
+					"strict" : false
+				},
+				{
+					"name" : "out_valid",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "out_ready",
+					"strict" : false
+				},
+				{
+					"name" : "in_byte[7]",
+					"strict" : false
+				},
+				{
+					"name" : "in_valid",
+					"strict" : false
+				},
+				{
+					"name" : "in_byte[2]",
+					"strict" : false
+				},
+				{
+					"name" : "in_byte[6]",
+					"strict" : false
+				},
+				{
+					"name" : "in_byte[1]",
+					"strict" : false
+				},
+				{
+					"name" : "in_byte[5]",
+					"strict" : false
+				},
+				{
+					"name" : "in_byte[0]",
+					"strict" : false
+				},
+				{
+					"name" : "in_byte[4]",
+					"strict" : false
+				},
+				{
+					"name" : "in_byte[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

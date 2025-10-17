@@ -1,0 +1,69 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dH:/PROJETS/FPGA/PROGRAMME16BITS
+T_opt
+!s110 1760634205
+VUUMW_6oWbN`Bc`_lZcEal0
+04 8 4 work tb_rns16 fast 0
+=1-2a07013d09f4-68f1255d-251-69ec
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+vrns16
+Z3 !s110 1760634204
+!i10b 1
+!s100 `6iCMM_UEggzXA7_PJ@CF3
+I]Bn^F8lb;L?7[c@aZHU?V1
+R1
+w1760634123
+8rns16.v
+Frns16.v
+!i122 6
+L0 4 1035
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z6 !s108 1760634204.000000
+!s107 rns16.v|
+!s90 -reportprogress|300|rns16.v|
+!i113 0
+Z7 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vtb_rns16
+R3
+!i10b 1
+!s100 7eZ?>TNfl7?N^zRnOgKS`1
+I629<^44VVm1Ecf46>D:LB0
+R1
+w1760631315
+8tb_rns16.v
+Ftb_rns16.v
+!i122 7
+L0 6 111
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 tb_rns16.v|
+!s90 -reportprogress|300|tb_rns16.v|
+!i113 0
+R7
+R2
